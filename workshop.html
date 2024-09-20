@@ -24,10 +24,12 @@
       console.log(result);
 
       //function called equal 
-     function equal(arg1, arg2){
+  function equal(arg1, arg2, message){
+
+      const defaultMessage = 'Success, both arguments are the same';
 
       if(arg1 === arg2){
-        return console.info('Success, both arguments are the same')
+        return console.info(message || defaultMessage)
       } else {
         console.error('Error, arguments are not the same');
       }
@@ -35,10 +37,12 @@
 
       //function called notEqual
 
-     function notEqual(arg1, arg2){
+function notEqual(arg1, arg2, message){
+
+      const defaultMessage = "This passed the not equal functions test"
 
       if (arg1 === arg2){
-        console.log('Error, both arguments are the same')
+        console.log(message || defaultMessage)
       } else {
         console.log('Success, both arguments are different')
       }
